@@ -3,7 +3,7 @@
 export class Todo {
     id: number | null = null;
     name: string  | null = null;
-    isCompleted: boolean | null = null;
+    isCompleted: boolean;
 
     
     constructor(texto: string) {

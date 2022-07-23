@@ -1,9 +1,16 @@
 <!-- `editing`  `completed` -->
-<li class="completed">
+<li [class.completed]="item.isCompleted"
+    [class.editing]="isTaskFieldEdit">
     <div class="view">
-        <input class="toggle" type="checkbox" checked>
-        <label>Taste JavaScript</label>
+        <input class="toggle" [formControl]="chkCompletedField" type="checkbox">
+
+        <label (dblclick)="edit()"> {{item.name}}</label>
+
         <button class="destroy"></button>
     </div>
-    <input class="edit" value="Create a TodoMVC template">
+    <input class="edit" 
+           type="text" 
+           [formControl]="taskField" 
+           (blur)="onFinishEdit()"
+           #inputEdit>
 </li>
