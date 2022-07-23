@@ -35,12 +35,23 @@ export class TodoItemComponent implements OnInit {
 
   edit() {
     this.isTaskFieldEdit = true;
+    this.taskField.setValue(this.item.name);
 
     setTimeout(() => {
       this.txtInputEdit.nativeElement.select();
     },1)
   }
+
   onFinishEdit() {
     this.isTaskFieldEdit = false;
+
+    if (this.taskField.invalid) { return; }
+    if (this.taskField.value === this.item.name) { return; }
+
+    this.store.dispatch(actions.edit({id: this.item.id, texto: this.taskField.value}));
+  }
+
+  onDelete() {
+    this.store.dispatch(actions.deleteTodo({id: this.item.id}));
   }
 }

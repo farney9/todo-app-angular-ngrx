@@ -6,7 +6,7 @@
 
         <label (dblclick)="edit()"> {{item.name}}</label>
 
-        <button class="destroy"></button>
+        <button class="destroy" (click)="onDelete()"></button>
     </div>
     <input class="edit" 
            type="text" 
