@@ -31,7 +31,7 @@ export class TodoFooterComponent implements OnInit {
   changeFilter(filterSelected: ValidFiltersType) {
     this.actualFilter = filterSelected;
     this.store.dispatch(actions.setFilter({filtro: this.actualFilter}));
-    console.log(this.actualFilter);
+    // console.log(this.actualFilter);
 
   }
 
