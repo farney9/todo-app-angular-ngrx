@@ -22,6 +22,16 @@ ng add @ngrx/store-devtools
 
 <https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd>
 
+## Compilar y link de GitHub Pages
+
+Live on [https://farney9.github.io/todo-app-angular-ngrx](https://farney9.github.io/todo-app-angular-ngrx)
+
+## compile command
+
+```text
+ng build --output-path docs --base-href=https://farney9.github.io/todo-app-angular-ngrx/
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
