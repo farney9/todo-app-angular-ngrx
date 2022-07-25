@@ -1,0 +1,1 @@
+export type ValidFiltersType = 'all'| 'active'| 'completed'
