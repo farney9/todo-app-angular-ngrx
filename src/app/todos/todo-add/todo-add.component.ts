@@ -15,7 +15,7 @@ export class TodoAddComponent implements OnInit {
   txtInput!: FormControl
 
   constructor( private store: Store<AppState>) { 
-    this.txtInput = new FormControl('Hola', [Validators.required, Validators.maxLength(80)], );
+    this.txtInput = new FormControl('', [Validators.required, Validators.maxLength(80)], );
   }
 
   ngOnInit(): void {

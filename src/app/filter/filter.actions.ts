@@ -3,7 +3,7 @@ import { ValidFiltersType } from './filter.type';
 
 
 
-export const addFilter = createAction(
+export const setFilter = createAction(
 
    '[FILTER] Set Filter',
     props<{ filtro: ValidFiltersType }>()
